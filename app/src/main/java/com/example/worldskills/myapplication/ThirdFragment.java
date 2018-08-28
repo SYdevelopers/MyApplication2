@@ -7,10 +7,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+
+import com.squareup.picasso.Picasso;
 
 
 public class ThirdFragment extends Fragment {
 
+    private ImageView imageView;
 
     public ThirdFragment() {
         // Required empty public constructor
@@ -20,8 +24,10 @@ public class ThirdFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_third, container, false);
+        View view=inflater.inflate(R.layout.fragment_third, container, false);
+        imageView=view.findViewById(R.id.imagen);
+        Picasso.get().load("http://i.imgur.com/DvpvklR.png").error(R.drawable.ic_launcher_foreground).placeholder(R.drawable.ic_launcher_background).fit().into(imageView);
+        return view;
     }
 
 
