@@ -23,8 +23,8 @@ public class FirstFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_third, container, false);
-        imageView=view.findViewById(R.id.imagen1);
-        Picasso.get().load("http://i.imgur.com/DvpvklR.png").error(R.drawable.ic_launcher_foreground).placeholder(R.drawable.ic_launcher_background).fit().into(imageView);
+        imageView=view.findViewById(R.id.imagenFirst);
+        Picasso.get().load("https://i.imgur.com/T41pEcE.jpg").error(R.drawable.ic_launcher_foreground).placeholder(R.drawable.ic_launcher_background).fit().into(imageView);
         return view;
     }
 
