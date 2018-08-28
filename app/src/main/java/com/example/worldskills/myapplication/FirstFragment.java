@@ -22,7 +22,7 @@ public class FirstFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_third, container, false);
+        View view=inflater.inflate(R.layout.fragment_first, container, false);
         imageView=view.findViewById(R.id.imagenFirst);
         Picasso.get().load("https://i.imgur.com/T41pEcE.jpg").error(R.drawable.ic_launcher_foreground).placeholder(R.drawable.ic_launcher_background).fit().into(imageView);
         return view;
